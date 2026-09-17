@@ -1,2 +1,1 @@
-# digiserbd.github.io
-URL: 
+url : https://admission.snkitinstitute.com/resturayafgan.github.io/
