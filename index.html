@@ -1,3232 +1,1176 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>DigiSER BD | Job • Service • Growth</title>
-
-  <meta name="description" content="DigiSER BD connects job seekers, skilled employees, local businesses and digital services in Bangladesh.">
-  <meta name="keywords" content="DigiSER BD, jobs Bangladesh, employee supplier, digital services, local business, graphic design, social media, website maintenance">
+  <title>Afghan Restaurant | Delicious Food, Great Moments</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Bengali:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
 
   <style>
-
-    /* =========================================================
-       DigiSER BD
-       Complete GitHub Pages Single File
-       HTML + CSS + JavaScript
-       ========================================================= */
-
-    :root{
-      --primary:#0866ff;
-      --primary-dark:#064cc7;
-      --secondary:#00a8ff;
-      --orange:#ff8a00;
-      --green:#16b979;
-      --dark:#071b38;
-      --dark2:#0b2850;
-      --text:#12233f;
-      --muted:#66758a;
-      --light:#f5f9ff;
-      --white:#ffffff;
-      --border:#e1eaf5;
-      --shadow:0 15px 45px rgba(14,63,125,.10);
-      --radius:18px;
+    :root {
+      --gold: #c78a35;
+      --gold-light: #e0a34c;
+      --dark: #11100e;
+      --cream: #f8f5ef;
+      --text: #252321;
+      --muted: #77736d;
+      --border: #e6e0d6;
     }
 
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
-    html{
-      scroll-behavior:smooth;
+    html {
+      scroll-behavior: smooth;
     }
 
-    body{
-      font-family:"Inter","Noto Sans Bengali",sans-serif;
-      color:var(--text);
-      background:#fff;
-      line-height:1.6;
-      overflow-x:hidden;
+    body {
+      font-family: "DM Sans", sans-serif;
+      color: var(--text);
+      background: var(--cream);
+      line-height: 1.6;
     }
 
-    a{
-      text-decoration:none;
-      color:inherit;
+    img {
+      display: block;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
     }
 
     button,
-    input,
-    select{
-      font-family:inherit;
+    a {
+      -webkit-tap-highlight-color: transparent;
     }
 
-    img{
-      max-width:100%;
-      display:block;
+    .container {
+      width: min(1150px, 92%);
+      margin: auto;
     }
 
-    .container{
-      width:min(1180px,92%);
-      margin:auto;
+    .section {
+      padding: 65px 0;
     }
 
-    /* ================= HEADER ================= */
-
-    header{
-      position:sticky;
-      top:0;
-      z-index:1000;
-      background:rgba(255,255,255,.96);
-      backdrop-filter:blur(14px);
-      border-bottom:1px solid rgba(225,234,245,.9);
+    .section-title {
+      text-align: center;
+      margin-bottom: 38px;
     }
 
-    .nav{
-      min-height:74px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:20px;
+    .section-title h2 {
+      font-family: "Playfair Display", serif;
+      font-size: 30px;
+      line-height: 1.25;
+      color: var(--text);
     }
 
-    .logo{
-      display:flex;
-      align-items:center;
-      gap:10px;
-      min-width:max-content;
+    .section-title h2::after {
+      content: "✦";
+      display: block;
+      color: var(--gold);
+      font-size: 17px;
+      margin-top: 8px;
+      letter-spacing: 15px;
+      padding-left: 15px;
     }
 
-    .logo-icon{
-      width:42px;
-      height:42px;
-      border-radius:13px;
-      background:linear-gradient(135deg,#0866ff,#00a8ff);
-      color:#fff;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      font-size:22px;
-      font-weight:800;
-      box-shadow:0 8px 20px rgba(8,102,255,.25);
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      padding: 13px 25px;
+      border-radius: 5px;
+      font-size: 13px;
+      font-weight: 700;
+      border: 1px solid var(--gold);
+      transition: .25s ease;
+      cursor: pointer;
     }
 
-    .logo-text{
-      font-size:21px;
-      font-weight:800;
-      color:var(--dark);
-      line-height:1.1;
+    .btn-primary {
+      color: white;
+      background: var(--gold);
     }
 
-    .logo-text span{
-      color:var(--primary);
+    .btn-outline {
+      color: white;
+      background: transparent;
     }
 
-    .logo-sub{
-      display:block;
-      font-size:9px;
-      font-weight:600;
-      color:var(--muted);
-      margin-top:3px;
-      letter-spacing:.2px;
+    .btn:hover {
+      background: var(--gold-light);
+      border-color: var(--gold-light);
+      transform: translateY(-2px);
     }
 
-    nav{
-      display:flex;
-      align-items:center;
-      gap:27px;
+    /* Header */
+    header {
+      height: 92px;
+      background: #11100e;
+      color: white;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+      position: relative;
+      z-index: 10;
     }
 
-    nav a{
-      font-size:14px;
-      font-weight:600;
-      color:#40516b;
-      position:relative;
-      transition:.25s;
+    .nav {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
     }
 
-    nav a:hover,
-    nav a.active{
-      color:var(--primary);
+    .logo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: var(--gold-light);
+      line-height: 1;
+      flex-shrink: 0;
     }
 
-    nav a.active:after{
-      content:"";
-      position:absolute;
-      left:0;
-      right:0;
-      bottom:-26px;
-      height:3px;
-      border-radius:5px;
-      background:var(--primary);
+    .logo .chef {
+      font-size: 27px;
+      margin-bottom: 5px;
     }
 
-    .nav-actions{
-      display:flex;
-      align-items:center;
-      gap:10px;
+    .logo strong {
+      font-family: "Playfair Display", serif;
+      font-size: 27px;
+      letter-spacing: 1px;
+      color: #f4f1eb;
     }
 
-    .search-icon{
-      width:40px;
-      height:40px;
-      border:0;
-      background:transparent;
-      font-size:20px;
-      cursor:pointer;
-      color:var(--dark);
+    .logo small {
+      color: var(--gold-light);
+      font-size: 10px;
+      letter-spacing: 4px;
+      margin-top: 7px;
     }
 
-    .btn{
-      border:0;
-      cursor:pointer;
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      gap:8px;
-      padding:12px 20px;
-      border-radius:10px;
-      font-weight:700;
-      font-size:14px;
-      transition:.25s;
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      font-size: 13px;
+      font-weight: 600;
     }
 
-    .btn:hover{
-      transform:translateY(-2px);
+    .nav-links a {
+      position: relative;
+      padding: 10px 0;
+      color: #e8e5df;
     }
 
-    .btn-outline{
-      border:1px solid var(--primary);
-      background:#fff;
-      color:var(--primary);
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background: var(--gold-light);
+      transition: .25s;
     }
 
-    .btn-primary{
-      background:var(--primary);
-      color:#fff;
-      box-shadow:0 8px 20px rgba(8,102,255,.20);
+    .nav-links a:hover::after,
+    .nav-links a.active::after {
+      width: 100%;
     }
 
-    .btn-orange{
-      background:var(--orange);
-      color:#fff;
-      box-shadow:0 8px 20px rgba(255,138,0,.20);
+    .order-btn {
+      padding: 11px 24px;
+      font-size: 12px;
     }
 
-    .mobile-menu{
-      display:none;
-      width:42px;
-      height:42px;
-      border:1px solid var(--border);
-      border-radius:10px;
-      background:#fff;
-      cursor:pointer;
-      font-size:21px;
+    .menu-toggle {
+      display: none;
+      background: transparent;
+      color: white;
+      border: 1px solid #555;
+      border-radius: 4px;
+      padding: 8px 12px;
+      font-size: 20px;
+      cursor: pointer;
     }
 
-    /* ================= HERO ================= */
-
-    .hero{
-      position:relative;
-      overflow:hidden;
+    /* Hero */
+    .hero {
+      min-height: 365px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      isolation: isolate;
       background:
-        radial-gradient(circle at 80% 30%,rgba(0,168,255,.22),transparent 30%),
-        radial-gradient(circle at 20% 80%,rgba(8,102,255,.15),transparent 30%),
-        linear-gradient(135deg,#eaf5ff 0%,#f8fbff 48%,#e7f4ff 100%);
-      padding:74px 0 42px;
+        linear-gradient(90deg, rgba(12,10,8,.96) 0%, rgba(12,10,8,.86) 34%, rgba(12,10,8,.25) 75%, rgba(12,10,8,.45) 100%),
+        url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1800&q=85") center/cover;
     }
 
-    .hero:before{
-      content:"";
-      position:absolute;
-      width:500px;
-      height:500px;
-      right:-180px;
-      top:-200px;
-      border-radius:50%;
-      border:80px solid rgba(8,102,255,.04);
+    .hero-content {
+      color: white;
+      max-width: 490px;
+      padding: 35px 0;
     }
 
-    .hero-grid{
-      display:grid;
-      grid-template-columns:1.05fr .95fr;
-      gap:50px;
-      align-items:center;
-      position:relative;
-      z-index:2;
+    .hero-script {
+      font-family: "Playfair Display", serif;
+      font-style: italic;
+      font-size: 30px;
+      color: var(--gold-light);
+      margin-bottom: 0;
     }
 
-    .hero-badge{
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
-      padding:8px 14px;
-      background:#e0efff;
-      color:var(--primary-dark);
-      border:1px solid #c7e1ff;
-      border-radius:30px;
-      font-size:12px;
-      font-weight:700;
-      margin-bottom:18px;
+    .hero h1 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(42px, 5vw, 65px);
+      line-height: 1.05;
+      letter-spacing: 1px;
+      margin-bottom: 7px;
     }
 
-    .hero h1{
-      font-size:clamp(38px,5vw,64px);
-      line-height:1.08;
-      letter-spacing:-2px;
-      color:var(--dark);
-      margin-bottom:18px;
+    .hero-subtitle {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--gold-light);
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: 7px;
+      margin-bottom: 17px;
     }
 
-    .hero h1 span{
-      color:var(--primary);
+    .hero-subtitle::before,
+    .hero-subtitle::after {
+      content: "";
+      width: 24px;
+      height: 2px;
+      background: var(--gold-light);
+      flex-shrink: 0;
     }
 
-    .hero h1 em{
-      color:var(--orange);
-      font-style:normal;
+    .hero p {
+      font-size: 13px;
+      color: #e0dcd5;
+      max-width: 325px;
+      margin-bottom: 24px;
     }
 
-    .hero-description{
-      max-width:650px;
-      font-size:17px;
-      color:#56677d;
-      margin-bottom:26px;
+    .hero-actions {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
     }
 
-    .hero-buttons{
-      display:flex;
-      gap:12px;
-      flex-wrap:wrap;
-      margin-bottom:30px;
+    /* About */
+    .about {
+      background: var(--cream);
     }
 
-    .search-box{
-      background:#fff;
-      padding:8px;
-      border:1px solid #d9e7f7;
-      border-radius:15px;
-      box-shadow:var(--shadow);
-      display:flex;
-      align-items:center;
-      max-width:700px;
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 1.9fr;
+      gap: 55px;
+      align-items: center;
     }
 
-    .search-field{
-      flex:1;
-      display:flex;
-      align-items:center;
-      gap:9px;
-      padding:8px 13px;
-      border-right:1px solid var(--border);
+    .about-heading {
+      font-family: "Playfair Display", serif;
+      font-size: 31px;
+      line-height: 1.2;
+      margin: 8px 0 15px;
     }
 
-    .search-field:last-of-type{
-      border-right:0;
+    .eyebrow {
+      font-family: "Playfair Display", serif;
+      font-style: italic;
+      font-size: 20px;
+      color: var(--gold);
     }
 
-    .search-field span{
-      font-size:19px;
+    .gold-line {
+      width: 42px;
+      height: 2px;
+      background: var(--gold);
+      margin: 15px 0;
     }
 
-    .search-field input,
-    .search-field select{
-      width:100%;
-      border:0;
-      outline:0;
-      background:transparent;
-      color:#4a5d76;
-      font-size:13px;
+    .about-text p {
+      font-size: 13px;
+      color: #6e6962;
+      max-width: 350px;
+      margin-bottom: 20px;
     }
 
-    .search-submit{
-      min-width:110px;
-      padding:13px 17px;
-      border:0;
-      border-radius:11px;
-      background:var(--primary);
-      color:#fff;
-      font-weight:700;
-      cursor:pointer;
+    .learn-btn {
+      font-size: 12px;
+      padding: 10px 18px;
     }
 
-    .trust-row{
-      display:flex;
-      flex-wrap:wrap;
-      gap:22px;
-      margin-top:28px;
+    .features {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
     }
 
-    .trust-item{
-      display:flex;
-      align-items:center;
-      gap:8px;
-      color:#50627a;
-      font-size:12px;
-      font-weight:600;
+    .feature {
+      text-align: center;
+      padding: 5px 28px;
+      border-right: 1px solid var(--border);
     }
 
-    .trust-icon{
-      width:31px;
-      height:31px;
-      border-radius:9px;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      background:#e7f2ff;
-      color:var(--primary);
+    .feature:last-child {
+      border-right: none;
     }
 
-    /* HERO VISUAL */
-
-    .hero-visual{
-      min-height:450px;
-      position:relative;
-      display:flex;
-      align-items:center;
-      justify-content:center;
+    .feature-icon {
+      width: 70px;
+      height: 70px;
+      border: 1px solid #eadfca;
+      border-radius: 50%;
+      margin: 0 auto 13px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold);
+      font-size: 31px;
     }
 
-    .person-card{
-      width:350px;
-      height:390px;
-      border-radius:30px;
+    .feature h3 {
+      font-family: "Playfair Display", serif;
+      font-size: 15px;
+      margin-bottom: 8px;
+    }
+
+    .feature p {
+      color: #77736d;
+      font-size: 12px;
+      line-height: 1.6;
+    }
+
+    /* Popular Dishes */
+    .dishes {
+      background: #fff;
+    }
+
+    .dishes-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 12px;
+    }
+
+    .dish-card {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+      background: #fff;
+      transition: .25s ease;
+    }
+
+    .dish-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 20px rgba(0,0,0,.07);
+    }
+
+    .dish-image {
+      height: 112px;
+      overflow: hidden;
+    }
+
+    .dish-image img {
+      height: 100%;
+      transition: .3s ease;
+    }
+
+    .dish-card:hover img {
+      transform: scale(1.06);
+    }
+
+    .dish-info {
+      padding: 10px 13px 13px;
+    }
+
+    .dish-info h3 {
+      font-size: 12px;
+      line-height: 1.4;
+      min-height: 34px;
+    }
+
+    .price {
+      color: var(--gold);
+      font-weight: 700;
+      font-size: 14px;
+      margin-top: 2px;
+    }
+
+    .price::before {
+      content: "৳ ";
+    }
+
+    .center-btn {
+      text-align: center;
+      margin-top: 25px;
+    }
+
+    /* Why Choose Us */
+    .why {
       background:
-        linear-gradient(160deg,#dceeff,#fff);
-      position:relative;
-      overflow:hidden;
-      box-shadow:0 25px 70px rgba(8,70,140,.15);
-      border:1px solid #d9eaff;
-    }
-
-    .person-card:before{
-      content:"";
-      position:absolute;
-      width:270px;
-      height:270px;
-      border-radius:50%;
-      background:#b9ddff;
-      left:40px;
-      top:55px;
-    }
-
-    .person-head{
-      position:absolute;
-      width:100px;
-      height:100px;
-      border-radius:50%;
-      background:#d7956a;
-      left:125px;
-      top:85px;
-      z-index:2;
-      border:7px solid #fff;
-      box-shadow:0 5px 20px rgba(0,0,0,.1);
-    }
-
-    .person-hair{
-      position:absolute;
-      width:106px;
-      height:55px;
-      background:#172438;
-      border-radius:60px 60px 20px 20px;
-      left:-3px;
-      top:-8px;
-    }
-
-    .person-body{
-      position:absolute;
-      width:200px;
-      height:190px;
-      border-radius:100px 100px 0 0;
-      background:#0a4fae;
-      left:75px;
-      top:190px;
-      z-index:2;
-    }
-
-    .person-shirt{
-      position:absolute;
-      width:75px;
-      height:100px;
-      background:#fff;
-      left:62px;
-      top:0;
-      clip-path:polygon(0 0,100% 0,65% 100%,35% 100%);
-    }
-
-    .person-tie{
-      position:absolute;
-      width:15px;
-      height:78px;
-      background:#ff8a00;
-      left:92px;
-      top:5px;
-      clip-path:polygon(50% 0,100% 18%,75% 100%,50% 85%,25% 100%,0 18%);
-    }
-
-    .laptop{
-      position:absolute;
-      z-index:4;
-      bottom:40px;
-      left:45px;
-      width:260px;
-      height:125px;
-      background:#172438;
-      border:8px solid #0a1628;
-      border-radius:12px;
-      box-shadow:0 15px 25px rgba(0,0,0,.18);
-    }
-
-    .laptop-screen{
-      height:100%;
-      background:#fff;
-      padding:16px;
-    }
-
-    .screen-logo{
-      color:var(--primary);
-      font-weight:800;
-      font-size:11px;
-    }
-
-    .screen-line{
-      width:65%;
-      height:7px;
-      background:#dce9f8;
-      border-radius:5px;
-      margin-top:14px;
+        linear-gradient(rgba(13,12,10,.95), rgba(13,12,10,.95)),
+        url("https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=1800&q=80") center/cover;
+      color: white;
+      padding: 26px 0 30px;
     }
 
-    .screen-line.short{
-      width:40%;
+    .why .section-title {
+      margin-bottom: 12px;
     }
 
-    .screen-boxes{
-      display:flex;
-      gap:7px;
-      margin-top:14px;
+    .why .section-title h2 {
+      color: white;
+      font-size: 27px;
     }
 
-    .screen-box{
-      height:40px;
-      flex:1;
-      background:#eaf4ff;
-      border-radius:6px;
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
     }
 
-    .float-card{
-      position:absolute;
-      z-index:8;
-      background:#fff;
-      padding:13px 15px;
-      border-radius:13px;
-      box-shadow:0 12px 35px rgba(11,52,102,.14);
-      display:flex;
-      align-items:center;
-      gap:10px;
-      font-size:12px;
-      font-weight:700;
+    .why-item {
+      text-align: center;
+      padding: 8px 28px;
+      border-right: 1px solid rgba(255,255,255,.22);
     }
 
-    .float-card .float-icon{
-      width:36px;
-      height:36px;
-      border-radius:10px;
-      background:#e7f3ff;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      font-size:18px;
+    .why-item:last-child {
+      border-right: none;
     }
 
-    .float-one{
-      left:0;
-      top:80px;
+    .why-icon {
+      color: var(--gold-light);
+      font-size: 31px;
+      margin-bottom: 5px;
     }
 
-    .float-two{
-      right:-5px;
-      top:160px;
+    .why-item h3 {
+      font-family: "Playfair Display", serif;
+      font-size: 14px;
+      margin-bottom: 4px;
     }
 
-    .float-three{
-      right:5px;
-      bottom:55px;
+    .why-item p {
+      color: #b9b4ac;
+      font-size: 11px;
+      line-height: 1.5;
     }
 
-    /* ================= SECTION ================= */
-
-    section{
-      padding:78px 0;
-    }
-
-    .section-head{
-      display:flex;
-      justify-content:space-between;
-      align-items:end;
-      gap:20px;
-      margin-bottom:32px;
-    }
-
-    .eyebrow{
-      color:var(--primary);
-      font-size:12px;
-      font-weight:800;
-      text-transform:uppercase;
-      letter-spacing:.8px;
-      margin-bottom:7px;
-    }
-
-    .section-title{
-      font-size:34px;
-      line-height:1.2;
-      color:var(--dark);
-      letter-spacing:-.7px;
-    }
-
-    .section-description{
-      max-width:580px;
-      color:var(--muted);
-      font-size:14px;
-      margin-top:9px;
-    }
-
-    .view-all{
-      color:var(--primary);
-      font-size:13px;
-      font-weight:700;
-      white-space:nowrap;
-    }
-
-    /* ================= SERVICES ================= */
-
-    .services-section{
-      background:#fff;
-    }
-
-    .services-grid{
-      display:grid;
-      grid-template-columns:repeat(4,1fr);
-      gap:18px;
-    }
-
-    .service-card{
-      padding:24px;
-      border:1px solid var(--border);
-      border-radius:16px;
-      background:#fff;
-      transition:.3s;
-      position:relative;
-      overflow:hidden;
-    }
-
-    .service-card:hover{
-      transform:translateY(-6px);
-      box-shadow:var(--shadow);
-      border-color:#c8ddfa;
-    }
-
-    .service-icon{
-      width:46px;
-      height:46px;
-      border-radius:13px;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      font-size:22px;
-      margin-bottom:17px;
-      background:#e9f3ff;
-    }
-
-    .service-card:nth-child(2) .service-icon{
-      background:#fff1df;
-    }
-
-    .service-card:nth-child(3) .service-icon{
-      background:#e6fff5;
-    }
-
-    .service-card:nth-child(4) .service-icon{
-      background:#f0eaff;
-    }
-
-    .service-card:nth-child(5) .service-icon{
-      background:#fff1e7;
-    }
-
-    .service-card:nth-child(6) .service-icon{
-      background:#e5f7ff;
-    }
-
-    .service-card:nth-child(7) .service-icon{
-      background:#f0efff;
-    }
-
-    .service-card:nth-child(8) .service-icon{
-      background:#e8f8ed;
-    }
-
-    .service-card h3{
-      font-size:15px;
-      margin-bottom:7px;
-      color:var(--dark);
-    }
-
-    .service-card p{
-      color:var(--muted);
-      font-size:12px;
-      min-height:58px;
-    }
-
-    .service-price{
-      display:block;
-      margin-top:13px;
-      color:var(--primary);
-      font-size:12px;
-      font-weight:800;
-    }
-
-    /* ================= JOBS ================= */
-
-    .jobs-section{
-      background:#f5faff;
-    }
-
-    .jobs-layout{
-      display:grid;
-      grid-template-columns:1fr 2fr;
-      gap:35px;
-      align-items:center;
-    }
-
-    .jobs-intro h2{
-      font-size:37px;
-      line-height:1.15;
-      color:var(--dark);
-      margin-bottom:13px;
-    }
-
-    .jobs-intro p{
-      color:var(--muted);
-      font-size:14px;
-      margin-bottom:22px;
-    }
-
-    .jobs-grid{
-      display:grid;
-      grid-template-columns:repeat(2,1fr);
-      gap:15px;
-    }
-
-    .job-card{
-      background:#fff;
-      border:1px solid var(--border);
-      border-radius:15px;
-      padding:20px;
-      transition:.3s;
-    }
-
-    .job-card:hover{
-      transform:translateY(-4px);
-      box-shadow:var(--shadow);
-    }
-
-    .job-top{
-      display:flex;
-      justify-content:space-between;
-      align-items:start;
-      gap:10px;
-    }
-
-    .job-company-icon{
-      width:42px;
-      height:42px;
-      border-radius:11px;
-      background:#e9f3ff;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      font-size:19px;
-    }
-
-    .job-type{
-      padding:4px 9px;
-      border-radius:20px;
-      background:#e9fff4;
-      color:#07935c;
-      font-size:10px;
-      font-weight:800;
-    }
-
-    .job-card h3{
-      font-size:15px;
-      margin-top:13px;
-      color:var(--dark);
-    }
-
-    .job-company{
-      font-size:11px;
-      color:var(--muted);
-      margin-top:3px;
-    }
-
-    .job-meta{
-      display:flex;
-      flex-direction:column;
-      gap:4px;
-      margin:12px 0;
-      color:#5e6d80;
-      font-size:11px;
-    }
-
-    .salary{
-      color:var(--primary);
-      font-weight:800;
-      font-size:12px;
-    }
-
-    .apply-link{
-      display:block;
-      margin-top:13px;
-      padding-top:12px;
-      border-top:1px solid var(--border);
-      color:var(--primary);
-      font-size:12px;
-      font-weight:800;
-      cursor:pointer;
-    }
-
-    /* ================= EMPLOYEES ================= */
-
-    .employees-section{
-      background:#fff;
-    }
-
-    .employees-grid{
-      display:grid;
-      grid-template-columns:repeat(6,1fr);
-      gap:13px;
-    }
-
-    .employee-card{
-      border:1px solid var(--border);
-      border-radius:15px;
-      padding:17px 12px;
-      text-align:center;
-      background:#fff;
-      transition:.3s;
-    }
-
-    .employee-card:hover{
-      transform:translateY(-5px);
-      box-shadow:var(--shadow);
-    }
-
-    .employee-avatar{
-      width:70px;
-      height:70px;
-      border-radius:50%;
-      margin:0 auto 11px;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      color:#fff;
-      font-size:25px;
-      font-weight:800;
-      background:linear-gradient(135deg,#0a64df,#00a8ff);
-    }
-
-    .employee-card:nth-child(2) .employee-avatar{
-      background:linear-gradient(135deg,#9a52df,#df5ba8);
-    }
-
-    .employee-card:nth-child(3) .employee-avatar{
-      background:linear-gradient(135deg,#00a977,#4bcf9e);
-    }
-
-    .employee-card:nth-child(4) .employee-avatar{
-      background:linear-gradient(135deg,#ff7b19,#ffb52e);
+    /* Gallery */
+    .gallery {
+      background: #fff;
+      padding-top: 28px;
+      padding-bottom: 38px;
     }
 
-    .employee-card:nth-child(5) .employee-avatar{
-      background:linear-gradient(135deg,#5b4ddd,#867af3);
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 12px;
     }
 
-    .employee-card:nth-child(6) .employee-avatar{
-      background:linear-gradient(135deg,#0089a9,#00c8c8);
+    .gallery-item {
+      height: 95px;
+      border-radius: 9px;
+      overflow: hidden;
     }
 
-    .employee-card h3{
-      font-size:13px;
-      color:var(--dark);
+    .gallery-item img {
+      height: 100%;
+      transition: .3s;
     }
 
-    .employee-role{
-      color:var(--muted);
-      font-size:10px;
-      margin:2px 0 7px;
+    .gallery-item:hover img {
+      transform: scale(1.08);
     }
 
-    .rating{
-      color:#f49a00;
-      font-size:11px;
-      font-weight:700;
+    /* Footer */
+    footer {
+      background: #11100e;
+      color: #ddd8d0;
+      padding: 25px 0 0;
     }
 
-    .available{
-      display:inline-block;
-      margin-top:7px;
-      background:#e7fff2;
-      color:#0c9b60;
-      border-radius:20px;
-      padding:3px 8px;
-      font-size:9px;
-      font-weight:800;
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 1fr 1.3fr 1fr;
+      gap: 25px;
+      padding-bottom: 22px;
     }
 
-    /* ================= BUSINESS ================= */
-
-    .business-section{
-      background:linear-gradient(135deg,#06254c,#073b78);
-      color:#fff;
-      overflow:hidden;
-      position:relative;
-    }
-
-    .business-section:after{
-      content:"";
-      position:absolute;
-      width:450px;
-      height:450px;
-      border-radius:50%;
-      border:80px solid rgba(255,255,255,.04);
-      right:-180px;
-      top:-170px;
-    }
-
-    .business-layout{
-      display:grid;
-      grid-template-columns:1fr 1.4fr;
-      gap:55px;
-      align-items:center;
-      position:relative;
-      z-index:2;
-    }
-
-    .business-section .eyebrow{
-      color:#65baff;
-    }
-
-    .business-section h2{
-      font-size:38px;
-      line-height:1.15;
-      margin-bottom:13px;
-    }
-
-    .business-section p{
-      color:#c7d9ed;
-      font-size:14px;
-      margin-bottom:22px;
-    }
-
-    .business-cards{
-      display:grid;
-      grid-template-columns:repeat(2,1fr);
-      gap:15px;
-    }
-
-    .business-card{
-      padding:21px;
-      border:1px solid rgba(255,255,255,.14);
-      background:rgba(255,255,255,.06);
-      border-radius:15px;
-      backdrop-filter:blur(10px);
-      transition:.3s;
-    }
-
-    .business-card:hover{
-      background:rgba(255,255,255,.10);
-      transform:translateY(-3px);
-    }
-
-    .business-card-icon{
-      width:40px;
-      height:40px;
-      border-radius:10px;
-      background:rgba(255,255,255,.12);
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      margin-bottom:12px;
-    }
-
-    .business-card h3{
-      font-size:14px;
-      margin-bottom:5px;
-    }
-
-    .business-card p{
-      font-size:11px;
-      margin:0;
-      color:#b5cbe3;
-    }
-
-    /* ================= HOW IT WORKS ================= */
-
-    .steps-section{
-      background:#f8fbff;
-    }
-
-    .steps-grid{
-      display:grid;
-      grid-template-columns:repeat(4,1fr);
-      gap:18px;
-      position:relative;
-    }
-
-    .step-card{
-      background:#fff;
-      border:1px solid var(--border);
-      border-radius:17px;
-      padding:24px;
-      position:relative;
-    }
-
-    .step-number{
-      width:38px;
-      height:38px;
-      border-radius:50%;
-      background:var(--primary);
-      color:#fff;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      font-weight:800;
-      margin-bottom:16px;
-    }
-
-    .step-card h3{
-      font-size:15px;
-      color:var(--dark);
-      margin-bottom:6px;
-    }
-
-    .step-card p{
-      color:var(--muted);
-      font-size:11px;
-    }
-
-    /* ================= STATS ================= */
-
-    .stats-section{
-      padding:35px 0;
-      background:#fff;
-    }
-
-    .stats-grid{
-      display:grid;
-      grid-template-columns:repeat(4,1fr);
-      gap:20px;
-    }
-
-    .stat{
-      text-align:center;
-      padding:15px;
-      border-right:1px solid var(--border);
-    }
-
-    .stat:last-child{
-      border-right:0;
+    .footer-column {
+      padding-right: 20px;
+      border-right: 1px solid #35332f;
     }
 
-    .stat-number{
-      color:var(--primary);
-      font-size:29px;
-      font-weight:800;
+    .footer-column:last-child {
+      border-right: none;
     }
 
-    .stat-label{
-      color:var(--muted);
-      font-size:12px;
-      font-weight:600;
+    .footer-logo {
+      align-items: flex-start;
     }
 
-    /* ================= CTA ================= */
-
-    .cta-section{
-      padding:35px 0;
-    }
-
-    .cta{
-      border-radius:20px;
-      padding:35px 45px;
-      background:
-        radial-gradient(circle at 85% 20%,rgba(0,168,255,.3),transparent 25%),
-        linear-gradient(110deg,#0756c9,#063984);
-      color:#fff;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:25px;
-      overflow:hidden;
-    }
-
-    .cta h2{
-      font-size:27px;
-      margin-bottom:5px;
-    }
-
-    .cta p{
-      color:#c9ddf4;
-      font-size:13px;
-    }
-
-    .cta-buttons{
-      display:flex;
-      gap:10px;
-      flex-wrap:wrap;
-    }
-
-    .btn-white{
-      background:#fff;
-      color:var(--primary);
-    }
-
-    .btn-whatsapp{
-      background:#19c778;
-      color:#fff;
-    }
-
-    /* ================= FOOTER ================= */
-
-    footer{
-      background:#06182f;
-      color:#fff;
-      padding:55px 0 0;
-    }
-
-    .footer-grid{
-      display:grid;
-      grid-template-columns:1.5fr 1fr 1fr 1.2fr;
-      gap:40px;
-      padding-bottom:40px;
-    }
-
-    .footer-logo{
-      color:#fff;
-    }
-
-    .footer-about{
-      color:#9db1c9;
-      font-size:12px;
-      max-width:290px;
-      margin-top:15px;
-    }
-
-    .footer-title{
-      font-size:13px;
-      margin-bottom:15px;
-    }
-
-    .footer-links{
-      display:flex;
-      flex-direction:column;
-      gap:9px;
-    }
-
-    .footer-links a{
-      color:#9db1c9;
-      font-size:11px;
-      transition:.2s;
-    }
-
-    .footer-links a:hover{
-      color:#fff;
-    }
-
-    .socials{
-      display:flex;
-      gap:8px;
-      margin-top:15px;
-    }
-
-    .social{
-      width:35px;
-      height:35px;
-      border-radius:9px;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      background:rgba(255,255,255,.08);
-      color:#fff;
-      font-size:13px;
-      font-weight:700;
+    .footer-logo strong {
+      font-size: 22px;
     }
 
-    .newsletter{
-      display:flex;
-      margin-top:15px;
+    .footer-logo small {
+      font-size: 8px;
     }
 
-    .newsletter input{
-      min-width:0;
-      flex:1;
-      border:1px solid rgba(255,255,255,.15);
-      background:rgba(255,255,255,.06);
-      color:#fff;
-      padding:10px;
-      outline:0;
-      border-radius:8px 0 0 8px;
-      font-size:11px;
+    .footer-column p {
+      font-size: 11px;
+      color: #aaa49b;
+      margin: 9px 0;
+      line-height: 1.6;
     }
 
-    .newsletter button{
-      width:42px;
-      border:0;
-      background:var(--primary);
-      color:#fff;
-      border-radius:0 8px 8px 0;
-      cursor:pointer;
+    .footer-column h3 {
+      color: #f3eee6;
+      font-size: 13px;
+      margin-bottom: 9px;
     }
 
-    .footer-bottom{
-      border-top:1px solid rgba(255,255,255,.08);
-      padding:18px 0;
-      display:flex;
-      justify-content:space-between;
-      gap:15px;
-      color:#7e95b1;
-      font-size:10px;
+    .footer-links {
+      list-style: none;
+      display: grid;
+      gap: 3px;
     }
 
-    /* ================= MODAL ================= */
-
-    .modal{
-      position:fixed;
-      inset:0;
-      background:rgba(4,18,38,.65);
-      backdrop-filter:blur(5px);
-      display:none;
-      align-items:center;
-      justify-content:center;
-      padding:20px;
-      z-index:2000;
-    }
-
-    .modal.show{
-      display:flex;
-    }
-
-    .modal-box{
-      background:#fff;
-      width:min(500px,100%);
-      border-radius:20px;
-      padding:28px;
-      position:relative;
-      box-shadow:0 30px 80px rgba(0,0,0,.2);
-    }
-
-    .modal-close{
-      position:absolute;
-      top:15px;
-      right:15px;
-      width:34px;
-      height:34px;
-      border:0;
-      border-radius:8px;
-      background:#f2f6fb;
-      cursor:pointer;
-      font-size:18px;
-    }
-
-    .modal-box h2{
-      color:var(--dark);
-      margin-bottom:7px;
+    .footer-links a {
+      font-size: 11px;
+      color: #aaa49b;
+      transition: .2s;
     }
 
-    .modal-box p{
-      color:var(--muted);
-      font-size:13px;
-      margin-bottom:20px;
+    .footer-links a:hover {
+      color: var(--gold-light);
     }
 
-    .form-group{
-      margin-bottom:13px;
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 11px;
+      color: #aaa49b;
+      margin: 7px 0;
     }
 
-    .form-group label{
-      display:block;
-      font-size:12px;
-      font-weight:700;
-      margin-bottom:5px;
+    .contact-item span {
+      color: var(--gold-light);
+      font-size: 14px;
     }
 
-    .form-group input,
-    .form-group select,
-    .form-group textarea{
-      width:100%;
-      border:1px solid var(--border);
-      border-radius:9px;
-      padding:11px;
-      outline:0;
-      font-size:13px;
+    .socials {
+      display: flex;
+      gap: 9px;
+      margin-top: 12px;
     }
 
-    .form-group textarea{
-      resize:vertical;
-      min-height:90px;
+    .socials a {
+      width: 29px;
+      height: 29px;
+      border: 1px solid #4a4640;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      transition: .2s;
     }
 
-    /* ================= TOAST ================= */
-
-    .toast{
-      position:fixed;
-      right:20px;
-      bottom:20px;
-      background:#071b38;
-      color:#fff;
-      padding:14px 18px;
-      border-radius:10px;
-      font-size:12px;
-      box-shadow:0 12px 30px rgba(0,0,0,.2);
-      transform:translateY(100px);
-      opacity:0;
-      transition:.3s;
-      z-index:3000;
+    .socials a:hover {
+      background: var(--gold);
+      border-color: var(--gold);
+      color: white;
     }
 
-    .toast.show{
-      transform:translateY(0);
-      opacity:1;
+    .copyright {
+      border-top: 1px solid #2e2b27;
+      text-align: center;
+      padding: 9px 0;
+      color: #77736d;
+      font-size: 10px;
     }
-
-    /* ================= RESPONSIVE ================= */
-
-    @media(max-width:1050px){
 
-      nav{
-        gap:16px;
+    /* Responsive */
+    @media (max-width: 900px) {
+      .nav-links {
+        gap: 16px;
       }
 
-      .services-grid{
-        grid-template-columns:repeat(3,1fr);
+      .dishes-grid {
+        grid-template-columns: repeat(3, 1fr);
       }
 
-      .employees-grid{
-        grid-template-columns:repeat(3,1fr);
+      .gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
       }
 
-      .hero-grid{
-        grid-template-columns:1fr;
+      .gallery-item {
+        height: 125px;
       }
 
-      .hero-content{
-        text-align:center;
+      .about-grid {
+        gap: 30px;
       }
 
-      .hero-description{
-        margin-left:auto;
-        margin-right:auto;
-      }
-
-      .hero-buttons,
-      .trust-row{
-        justify-content:center;
-      }
-
-      .search-box{
-        margin:auto;
-      }
-
-      .hero-visual{
-        min-height:420px;
+      .feature {
+        padding: 5px 15px;
       }
     }
 
-    @media(max-width:800px){
-
-      nav{
-        position:absolute;
-        top:74px;
-        left:0;
-        right:0;
-        display:none;
-        flex-direction:column;
-        background:#fff;
-        padding:20px;
-        border-bottom:1px solid var(--border);
-        box-shadow:0 15px 30px rgba(0,0,0,.08);
+    @media (max-width: 700px) {
+      header {
+        height: 76px;
       }
 
-      nav.show{
-        display:flex;
+      .logo strong {
+        font-size: 22px;
       }
 
-      nav a.active:after{
-        display:none;
+      .logo .chef {
+        font-size: 21px;
       }
 
-      .mobile-menu{
-        display:block;
+      .logo small {
+        font-size: 8px;
       }
 
-      .nav-actions .search-icon{
-        display:none;
+      .menu-toggle {
+        display: block;
       }
 
-      .nav-actions .btn-outline{
-        display:none;
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 76px;
+        left: 0;
+        right: 0;
+        background: #11100e;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 12px 5%;
+        border-top: 1px solid #333;
       }
 
-      .services-grid{
-        grid-template-columns:repeat(2,1fr);
+      .nav-links.show {
+        display: flex;
       }
 
-      .jobs-layout{
-        grid-template-columns:1fr;
+      .nav-links a {
+        padding: 12px 0;
+        border-bottom: 1px solid #282622;
       }
 
-      .business-layout{
-        grid-template-columns:1fr;
+      .nav-links a::after {
+        display: none;
       }
 
-      .steps-grid{
-        grid-template-columns:repeat(2,1fr);
+      .order-btn {
+        display: none;
       }
 
-      .stats-grid{
-        grid-template-columns:repeat(2,1fr);
+      .hero {
+        min-height: 470px;
+        background-position: center;
       }
 
-      .stat{
-        border-right:0;
-        border-bottom:1px solid var(--border);
+      .hero-content {
+        padding: 45px 0;
       }
 
-      .footer-grid{
-        grid-template-columns:repeat(2,1fr);
+      .hero h1 {
+        font-size: 45px;
       }
 
-      .cta{
-        flex-direction:column;
-        align-items:flex-start;
-      }
-    }
-
-    @media(max-width:600px){
-
-      .container{
-        width:92%;
+      .hero-subtitle {
+        font-size: 17px;
+        letter-spacing: 4px;
       }
 
-      .nav{
-        min-height:66px;
+      .about-grid {
+        grid-template-columns: 1fr;
       }
 
-      .hero{
-        padding:45px 0 35px;
+      .about-text p {
+        max-width: 100%;
       }
 
-      .hero h1{
-        font-size:39px;
-        letter-spacing:-1.2px;
+      .features {
+        grid-template-columns: 1fr;
+        gap: 25px;
       }
 
-      .hero-description{
-        font-size:14px;
+      .feature {
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+        padding-bottom: 22px;
       }
 
-      .search-box{
-        flex-direction:column;
-        padding:7px;
+      .feature:last-child {
+        border-bottom: none;
       }
 
-      .search-field{
-        width:100%;
-        border-right:0;
-        border-bottom:1px solid var(--border);
-        padding:12px;
+      .dishes-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
       }
 
-      .search-submit{
-        width:100%;
-        margin-top:5px;
+      .dish-image {
+        height: 140px;
       }
 
-      .hero-visual{
-        transform:scale(.86);
-        margin:-30px 0;
+      .why-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px 0;
       }
 
-      .person-card{
-        width:310px;
+      .why-item {
+        padding: 8px 15px;
+        border-right: none;
       }
 
-      .float-one{
-        left:-5px;
+      .why-item:nth-child(odd) {
+        border-right: 1px solid rgba(255,255,255,.22);
       }
 
-      .float-two{
-        right:-5px;
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
       }
 
-      section{
-        padding:55px 0;
+      .gallery-item {
+        height: 135px;
       }
 
-      .section-head{
-        flex-direction:column;
-        align-items:flex-start;
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px 15px;
       }
 
-      .section-title{
-        font-size:28px;
-      }
-
-      .services-grid,
-      .jobs-grid,
-      .business-cards,
-      .steps-grid{
-        grid-template-columns:1fr;
-      }
-
-      .employees-grid{
-        grid-template-columns:repeat(2,1fr);
-      }
-
-      .employees-grid .employee-card{
-        padding:15px 8px;
-      }
-
-      .business-section h2{
-        font-size:30px;
-      }
-
-      .stats-grid{
-        grid-template-columns:1fr 1fr;
-      }
-
-      .cta{
-        padding:28px 24px;
-      }
-
-      .cta h2{
-        font-size:22px;
-      }
-
-      .footer-grid{
-        grid-template-columns:1fr;
-      }
-
-      .footer-bottom{
-        flex-direction:column;
+      .footer-column {
+        border-right: none;
+        padding-right: 0;
       }
     }
 
+    @media (max-width: 380px) {
+      .hero h1 {
+        font-size: 38px;
+      }
+
+      .hero-subtitle {
+        font-size: 14px;
+        letter-spacing: 3px;
+      }
+
+      .dishes-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .dish-image {
+        height: 190px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 </head>
 
 <body>
 
-  <!-- ========================================================
-       HEADER
-       ======================================================== -->
-
+  <!-- Header -->
   <header>
     <div class="container nav">
 
       <a href="#home" class="logo">
-
-        <div class="logo-icon">D</div>
-
-        <div>
-          <div class="logo-text">
-            DigiSER <span>BD</span>
-          </div>
-          <span class="logo-sub">
-            Job • Service • Growth
-          </span>
-        </div>
-
+        <span class="chef">♨</span>
+        <strong>AFGHAN</strong>
+        <small>— RESTAURANT —</small>
       </a>
 
-      <nav id="mainNav">
-
+      <nav class="nav-links" id="navLinks">
         <a href="#home" class="active">Home</a>
-        <a href="#jobs">Jobs</a>
-        <a href="#services">Services</a>
-        <a href="#employees">Employees</a>
-        <a href="#businesses">Businesses</a>
-        <a href="#how">How It Works</a>
+        <a href="#menu">Menu</a>
+        <a href="#about">About Us</a>
+        <a href="#gallery">Gallery</a>
         <a href="#contact">Contact</a>
-
       </nav>
 
-      <div class="nav-actions">
+      <a href="#menu" class="btn btn-primary order-btn">
+        Order Now 🛍
+      </a>
 
-        <button class="search-icon" onclick="focusSearch()" title="Search">
-          🔍
-        </button>
-
-        <button class="btn btn-outline" onclick="openModal('login')">
-          Login
-        </button>
-
-        <button class="btn btn-primary" onclick="openModal('register')">
-          Register
-        </button>
-
-        <button class="mobile-menu" onclick="toggleMenu()">
-          ☰
-        </button>
-
-      </div>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+        ☰
+      </button>
 
     </div>
   </header>
 
 
-  <!-- ========================================================
-       HERO
-       ======================================================== -->
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="container">
+      <div class="hero-content">
 
-  <main id="home">
+        <div class="hero-script">Welcome to</div>
 
-    <section class="hero">
+        <h1>AFGHAN</h1>
 
-      <div class="container hero-grid">
+        <div class="hero-subtitle">RESTAURANT</div>
 
-        <div class="hero-content">
+        <p>
+          Delicious food, warm hospitality and
+          a memorable experience — all in one place.
+        </p>
 
-          <div class="hero-badge">
-            🚀 Bangladesh's Job & Service Platform
-          </div>
-
-          <h1>
-            Find Jobs.<br>
-            <span>Hire People.</span><br>
-            <em>Grow Business.</em>
-          </h1>
-
-          <p class="hero-description">
-            DigiSER BD connects job seekers, skilled employees,
-            local businesses and professional digital services
-            in one simple platform.
-          </p>
-
-          <div class="hero-buttons">
-
-            <button class="btn btn-primary" onclick="scrollToSection('jobs')">
-              🔎 Find Jobs
-            </button>
-
-            <button class="btn btn-orange" onclick="openModal('hire')">
-              👥 Hire Employee
-            </button>
-
-            <button class="btn btn-outline" onclick="scrollToSection('services')">
-              🛠 Get Services
-            </button>
-
-          </div>
-
-
-          <div class="search-box" id="mainSearch">
-
-            <div class="search-field">
-              <span>🔎</span>
-              <input
-                type="text"
-                id="searchInput"
-                placeholder="Job / Service / Employee"
-              >
-            </div>
-
-            <div class="search-field">
-              <span>📍</span>
-              <input
-                type="text"
-                id="locationInput"
-                placeholder="Location e.g. Dhaka"
-              >
-            </div>
-
-            <button class="search-submit" onclick="performSearch()">
-              Search
-            </button>
-
-          </div>
-
-
-          <div class="trust-row">
-
-            <div class="trust-item">
-              <span class="trust-icon">✓</span>
-              Verified Profiles
-            </div>
-
-            <div class="trust-item">
-              <span class="trust-icon">🏪</span>
-              Local Businesses
-            </div>
-
-            <div class="trust-item">
-              <span class="trust-icon">⚡</span>
-              Quick Hiring
-            </div>
-
-            <div class="trust-item">
-              <span class="trust-icon">🛡</span>
-              Safe & Trusted
-            </div>
-
-          </div>
-
-        </div>
-
-
-        <!-- HERO VISUAL -->
-
-        <div class="hero-visual">
-
-          <div class="float-card float-one">
-            <div class="float-icon">💼</div>
-            <div>
-              Find Jobs
-              <small style="display:block;color:#718096;font-weight:500;">
-                Start your career
-              </small>
-            </div>
-          </div>
-
-
-          <div class="float-card float-two">
-            <div class="float-icon">👥</div>
-            <div>
-              Hire Talent
-              <small style="display:block;color:#718096;font-weight:500;">
-                Find skilled people
-              </small>
-            </div>
-          </div>
-
-
-          <div class="person-card">
-
-            <div class="person-head">
-              <div class="person-hair"></div>
-            </div>
-
-            <div class="person-body">
-              <div class="person-shirt"></div>
-              <div class="person-tie"></div>
-            </div>
-
-            <div class="laptop">
-
-              <div class="laptop-screen">
-
-                <div class="screen-logo">
-                  DigiSER BD
-                </div>
-
-                <div class="screen-line"></div>
-                <div class="screen-line short"></div>
-
-                <div class="screen-boxes">
-                  <div class="screen-box"></div>
-                  <div class="screen-box"></div>
-                  <div class="screen-box"></div>
-                </div>
-
-              </div>
-
-            </div>
-
-          </div>
-
-
-          <div class="float-card float-three">
-            <div class="float-icon">📈</div>
-            <div>
-              Grow Together
-              <small style="display:block;color:#718096;font-weight:500;">
-                Better business
-              </small>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- ======================================================
-         SERVICES
-         ====================================================== -->
-
-    <section class="services-section" id="services">
-
-      <div class="container">
-
-        <div class="section-head">
-
-          <div>
-            <div class="eyebrow">Our Services</div>
-
-            <h2 class="section-title">
-              Professional Services for Your Business
-            </h2>
-
-            <p class="section-description">
-              From digital solutions to local support,
-              DigiSER BD helps businesses save time,
-              find people and grow.
-            </p>
-          </div>
-
-          <a href="#services" class="view-all">
-            View All Services →
+        <div class="hero-actions">
+          <a href="#menu" class="btn btn-primary">
+            View Menu 🍴
           </a>
 
-        </div>
-
-
-        <div class="services-grid">
-
-          <div class="service-card">
-            <div class="service-icon">🎨</div>
-            <h3>Graphic Design</h3>
-            <p>
-              Logo, Banner, Social Media Post,
-              Print Design and more.
-            </p>
-            <span class="service-price">From ৳500</span>
-          </div>
-
-
-          <div class="service-card">
-            <div class="service-icon">📱</div>
-            <h3>Social Media Management</h3>
-            <p>
-              Facebook, Instagram, YouTube,
-              TikTok marketing and management.
-            </p>
-            <span class="service-price">From ৳1,000</span>
-          </div>
-
-
-          <div class="service-card">
-            <div class="service-icon">💻</div>
-            <h3>Website Maintenance</h3>
-            <p>
-              Website update, backup,
-              security and content support.
-            </p>
-            <span class="service-price">From ৳1,000</span>
-          </div>
-
-
-          <div class="service-card">
-            <div class="service-icon">👨‍💼</div>
-            <h3>Employee Supplier</h3>
-            <p>
-              Skilled and unskilled manpower
-              for your local business.
-            </p>
-            <span class="service-price">Contact Us</span>
-          </div>
-
-
-          <div class="service-card">
-            <div class="service-icon">🏠</div>
-            <h3>Land Supported Service</h3>
-            <p>
-              Land purchase, rent, document
-              support and consultation.
-            </p>
-            <span class="service-price">Contact Us</span>
-          </div>
-
-
-          <div class="service-card">
-            <div class="service-icon">📈</div>
-            <h3>Digital Marketing</h3>
-            <p>
-              SEO, advertising, content and
-              business lead generation.
-            </p>
-            <span class="service-price">From ৳1,000</span>
-          </div>
-
-
-          <div class="service-card">
-            <div class="service-icon">📝</div>
-            <h3>Data Entry & Admin Support</h3>
-            <p>
-              Data entry, Excel, PDF,
-              virtual assistant support.
-            </p>
-            <span class="service-price">From ৳500</span>
-          </div>
-
-
-          <div class="service-card">
-            <div class="service-icon">🔧</div>
-            <h3>Other Local Services</h3>
-            <p>
-              Printing, delivery, event support
-              and other local services.
-            </p>
-            <span class="service-price">From ৳300</span>
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- ======================================================
-         JOBS
-         ====================================================== -->
-
-    <section class="jobs-section" id="jobs">
-
-      <div class="container jobs-layout">
-
-        <div class="jobs-intro">
-
-          <div class="eyebrow">Latest Job Opportunities</div>
-
-          <h2>
-            Find Your<br>
-            <span style="color:var(--primary)">
-              Dream Job
-            </span>
-          </h2>
-
-          <p>
-            Explore job opportunities from local businesses.
-            Build your profile, apply for jobs and start
-            your career journey.
-          </p>
-
-          <button
-            class="btn btn-primary"
-            onclick="showToast('Jobs page will be available soon!')"
-          >
-            Browse All Jobs →
-          </button>
-
-        </div>
-
-
-        <div class="jobs-grid">
-
-          <div class="job-card">
-
-            <div class="job-top">
-              <div class="job-company-icon">🎨</div>
-              <span class="job-type">Full Time</span>
-            </div>
-
-            <h3>Graphic Designer</h3>
-
-            <div class="job-company">
-              Creative Studio BD
-            </div>
-
-            <div class="job-meta">
-              <span>📍 Dhaka, Bangladesh</span>
-              <span class="salary">৳15,000 – ৳25,000</span>
-            </div>
-
-            <span
-              class="apply-link"
-              onclick="openModal('apply')"
-            >
-              Apply Now →
-            </span>
-
-          </div>
-
-
-          <div class="job-card">
-
-            <div class="job-top">
-              <div class="job-company-icon">📱</div>
-              <span
-                class="job-type"
-                style="background:#fff5df;color:#d27a00;"
-              >
-                Part Time
-              </span>
-            </div>
-
-            <h3>Social Media Manager</h3>
-
-            <div class="job-company">
-              Digital Growth Ltd.
-            </div>
-
-            <div class="job-meta">
-              <span>📍 Dhaka, Bangladesh</span>
-              <span class="salary">৳10,000 – ৳18,000</span>
-            </div>
-
-            <span
-              class="apply-link"
-              onclick="openModal('apply')"
-            >
-              Apply Now →
-            </span>
-
-          </div>
-
-
-          <div class="job-card">
-
-            <div class="job-top">
-              <div class="job-company-icon">💻</div>
-              <span class="job-type">
-                Full Time
-              </span>
-            </div>
-
-            <h3>Web Developer</h3>
-
-            <div class="job-company">
-              Tech Solution BD
-            </div>
-
-            <div class="job-meta">
-              <span>📍 Dhaka, Bangladesh</span>
-              <span class="salary">৳20,000 – ৳40,000</span>
-            </div>
-
-            <span
-              class="apply-link"
-              onclick="openModal('apply')"
-            >
-              Apply Now →
-            </span>
-
-          </div>
-
-
-          <div class="job-card">
-
-            <div class="job-top">
-              <div class="job-company-icon">🧑‍💼</div>
-              <span
-                class="job-type"
-                style="background:#f0eaff;color:#7446d8;"
-              >
-                Contract
-              </span>
-            </div>
-
-            <h3>Office Assistant</h3>
-
-            <div class="job-company">
-              Sunrise Trading
-            </div>
-
-            <div class="job-meta">
-              <span>📍 Dhaka, Bangladesh</span>
-              <span class="salary">৳8,000 – ৳12,000</span>
-            </div>
-
-            <span
-              class="apply-link"
-              onclick="openModal('apply')"
-            >
-              Apply Now →
-            </span>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- ======================================================
-         EMPLOYEES
-         ====================================================== -->
-
-    <section class="employees-section" id="employees">
-
-      <div class="container">
-
-        <div class="section-head">
-
-          <div>
-
-            <div class="eyebrow">
-              Featured Employees
-            </div>
-
-            <h2 class="section-title">
-              Find Skilled Employees
-            </h2>
-
-            <p class="section-description">
-              Discover talented professionals for your
-              business, project or organization.
-            </p>
-
-          </div>
-
-          <a
-            href="#employees"
-            class="view-all"
-            onclick="showToast('Employee directory coming soon!')"
-          >
-            View All Employees →
+          <a href="#contact" class="btn btn-outline">
+            Order Now 🛒
           </a>
-
-        </div>
-
-
-        <div class="employees-grid">
-
-          <div class="employee-card">
-            <div class="employee-avatar">R</div>
-            <h3>Md. Rahman</h3>
-            <div class="employee-role">Graphic Designer</div>
-            <div class="rating">★ 4.8 (24)</div>
-            <span class="available">Available</span>
-          </div>
-
-
-          <div class="employee-card">
-            <div class="employee-avatar">A</div>
-            <h3>Ayesha Akter</h3>
-            <div class="employee-role">Social Media Manager</div>
-            <div class="rating">★ 4.7 (18)</div>
-            <span class="available">Available</span>
-          </div>
-
-
-          <div class="employee-card">
-            <div class="employee-avatar">T</div>
-            <h3>Tariq Hasan</h3>
-            <div class="employee-role">Web Developer</div>
-            <div class="rating">★ 4.9 (32)</div>
-            <span class="available">Available</span>
-          </div>
-
-
-          <div class="employee-card">
-            <div class="employee-avatar">N</div>
-            <h3>Nusrat Jahan</h3>
-            <div class="employee-role">Content Writer</div>
-            <div class="rating">★ 4.6 (21)</div>
-            <span class="available">Available</span>
-          </div>
-
-
-          <div class="employee-card">
-            <div class="employee-avatar">R</div>
-            <h3>Rasel Ahmed</h3>
-            <div class="employee-role">Data Entry Operator</div>
-            <div class="rating">★ 4.5 (16)</div>
-            <span class="available">Available</span>
-          </div>
-
-
-          <div class="employee-card">
-            <div class="employee-avatar">S</div>
-            <h3>Shamim Hossain</h3>
-            <div class="employee-role">Video Editor</div>
-            <div class="rating">★ 4.7 (14)</div>
-            <span class="available">Available</span>
-          </div>
-
         </div>
 
       </div>
+    </div>
+  </section>
 
-    </section>
 
+  <!-- About Us -->
+  <section class="section about" id="about">
+    <div class="container about-grid">
 
-    <!-- ======================================================
-         BUSINESSES
-         ====================================================== -->
+      <div class="about-text">
+        <div class="eyebrow">About Us</div>
 
-    <section class="business-section" id="businesses">
+        <h2 class="about-heading">
+          Good Food<br>
+          Great Moments
+        </h2>
 
-      <div class="container business-layout">
+        <div class="gold-line"></div>
 
-        <div>
+        <p>
+          Afghan Restaurant is a small and cozy place
+          where we serve delicious & healthy food
+          with the best quality ingredients. Our goal is
+          to make every meal a memorable experience
+          for our guests.
+        </p>
 
-          <div class="eyebrow">
-            Support Local Businesses
-          </div>
+        <a href="#contact" class="btn btn-primary learn-btn">
+          Learn More → 
+        </a>
+      </div>
 
-          <h2>
-            Local Businesses,<br>
-            Local Growth
-          </h2>
+      <div class="features">
 
+        <div class="feature">
+          <div class="feature-icon">♨</div>
+          <h3>Fresh Ingredients</h3>
           <p>
-            We help local businesses get the right people,
-            digital services and online support to grow faster.
-            List your business, hire staff or get professional
-            services — all in one platform.
+            We use the freshest ingredients
+            to serve you the best.
           </p>
-
-          <button
-            class="btn btn-orange"
-            onclick="openModal('business')"
-          >
-            🏪 List Your Business →
-          </button>
-
         </div>
 
+        <div class="feature">
+          <div class="feature-icon">♨</div>
+          <h3>Hygienic Food</h3>
+          <p>
+            Hygiene and quality
+            are our top priorities.
+          </p>
+        </div>
 
-        <div class="business-cards">
+        <div class="feature">
+          <div class="feature-icon">♧</div>
+          <h3>Friendly Service</h3>
+          <p>
+            Our friendly team is
+            always here to serve you better.
+          </p>
+        </div>
 
-          <div class="business-card">
-            <div class="business-card-icon">👥</div>
-            <h3>Find Employees</h3>
-            <p>
-              Find skilled and trusted people
-              for your business.
-            </p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Popular Dishes -->
+  <section class="section dishes" id="menu">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Our Popular Dishes</h2>
+      </div>
+
+      <div class="dishes-grid">
+
+        <article class="dish-card">
+          <div class="dish-image">
+            <img src="https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=600&q=85" alt="Afghan Beef Pulao" loading="lazy">
           </div>
-
-
-          <div class="business-card">
-            <div class="business-card-icon">📢</div>
-            <h3>Get Customers</h3>
-            <p>
-              Build your online presence
-              and promote your business.
-            </p>
+          <div class="dish-info">
+            <h3>Afghan Beef Pulao</h3>
+            <div class="price">250</div>
           </div>
+        </article>
 
-
-          <div class="business-card">
-            <div class="business-card-icon">💻</div>
-            <h3>Digital Services</h3>
-            <p>
-              Get graphic, web and social
-              media services.
-            </p>
+        <article class="dish-card">
+          <div class="dish-image">
+            <img src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?auto=format&fit=crop&w=600&q=85" alt="Chicken Korma" loading="lazy">
           </div>
-
-
-          <div class="business-card">
-            <div class="business-card-icon">📈</div>
-            <h3>Grow Your Business</h3>
-            <p>
-              Use digital tools and people
-              to grow faster.
-            </p>
+          <div class="dish-info">
+            <h3>Chicken Korma</h3>
+            <div class="price">220</div>
           </div>
+        </article>
 
+        <article class="dish-card">
+          <div class="dish-image">
+            <img src="https://images.unsplash.com/photo-1517244683847-7456b63c5969?auto=format&fit=crop&w=600&q=85" alt="Afghan Chicken Pulao" loading="lazy">
+          </div>
+          <div class="dish-info">
+            <h3>Afghan Chicken Pulao</h3>
+            <div class="price">200</div>
+          </div>
+        </article>
+
+        <article class="dish-card">
+          <div class="dish-image">
+            <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=600&q=85" alt="Beef Karahi" loading="lazy">
+          </div>
+          <div class="dish-info">
+            <h3>Beef Karahi</h3>
+            <div class="price">280</div>
+          </div>
+        </article>
+
+        <article class="dish-card">
+          <div class="dish-image">
+            <img src="https://images.unsplash.com/photo-1598103442097-8b74394b95c6?auto=format&fit=crop&w=600&q=85" alt="Chicken Roast" loading="lazy">
+          </div>
+          <div class="dish-info">
+            <h3>Chicken Roast</h3>
+            <div class="price">180</div>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="center-btn">
+        <a href="#contact" class="btn btn-primary">
+          View Full Menu →
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- Why Choose Us -->
+  <section class="why">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Why Choose Us</h2>
+      </div>
+
+      <div class="why-grid">
+
+        <div class="why-item">
+          <div class="why-icon">♙</div>
+          <h3>Best Quality</h3>
+          <p>We maintain the highest quality in our food.</p>
+        </div>
+
+        <div class="why-item">
+          <div class="why-icon">♢</div>
+          <h3>Affordable Price</h3>
+          <p>Delicious food at a price that fits your budget.</p>
+        </div>
+
+        <div class="why-item">
+          <div class="why-icon">♡</div>
+          <h3>Made with Love</h3>
+          <p>Every dish is made with care and love.</p>
+        </div>
+
+        <div class="why-item">
+          <div class="why-icon">◷</div>
+          <h3>Fast Service</h3>
+          <p>We value your time and serve you quickly.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Gallery -->
+  <section class="section gallery" id="gallery">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Our Gallery</h2>
+      </div>
+
+      <div class="gallery-grid">
+
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=600&q=85" alt="Restaurant interior" loading="lazy">
+        </div>
+
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=600&q=85" alt="Delicious food" loading="lazy">
+        </div>
+
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=600&q=85" alt="Restaurant seating" loading="lazy">
+        </div>
+
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1601050690117-94f5f6fa8bd7?auto=format&fit=crop&w=600&q=85" alt="Food dish" loading="lazy">
+        </div>
+
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=600&q=85" alt="Restaurant dining area" loading="lazy">
+        </div>
+
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=600&q=85" alt="Rice dish" loading="lazy">
         </div>
 
       </div>
 
-    </section>
-
-
-    <!-- ======================================================
-         HOW IT WORKS
-         ====================================================== -->
-
-    <section class="steps-section" id="how">
-
-      <div class="container">
-
-        <div class="section-head">
-
-          <div>
-
-            <div class="eyebrow">
-              How It Works
-            </div>
-
-            <h2 class="section-title">
-              Simple Steps to Get Started
-            </h2>
-
-            <p class="section-description">
-              Whether you are looking for a job,
-              an employee or a professional service,
-              getting started is simple.
-            </p>
-
-          </div>
-
-        </div>
-
-
-        <div class="steps-grid">
-
-          <div class="step-card">
-
-            <div class="step-number">1</div>
-
-            <h3>Create Account</h3>
-
-            <p>
-              Register as a job seeker,
-              employee, business or service provider.
-            </p>
-
-          </div>
-
-
-          <div class="step-card">
-
-            <div class="step-number">2</div>
-
-            <h3>Search & Choose</h3>
-
-            <p>
-              Find the right job, employee,
-              business or service.
-            </p>
-
-          </div>
-
-
-          <div class="step-card">
-
-            <div class="step-number">3</div>
-
-            <h3>Apply or Contact</h3>
-
-            <p>
-              Apply for jobs or contact
-              professionals and businesses.
-            </p>
-
-          </div>
-
-
-          <div class="step-card">
-
-            <div class="step-number">4</div>
-
-            <h3>Get Started</h3>
-
-            <p>
-              Connect, work together and
-              grow with DigiSER BD.
-            </p>
-
-          </div>
-
-        </div>
-
+      <div class="center-btn">
+        <a href="#contact" class="btn btn-primary">
+          View More Photos →
+        </a>
       </div>
 
-    </section>
+    </div>
+  </section>
 
 
-    <!-- ======================================================
-         STATS
-         ====================================================== -->
-
-    <section class="stats-section">
-
-      <div class="container stats-grid">
-
-        <div class="stat">
-          <div class="stat-number">5,000+</div>
-          <div class="stat-label">Job Opportunities</div>
-        </div>
-
-        <div class="stat">
-          <div class="stat-number">2,500+</div>
-          <div class="stat-label">Skilled Professionals</div>
-        </div>
-
-        <div class="stat">
-          <div class="stat-number">1,200+</div>
-          <div class="stat-label">Local Businesses</div>
-        </div>
-
-        <div class="stat">
-          <div class="stat-number">10,000+</div>
-          <div class="stat-label">Registered Users</div>
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- ======================================================
-         CTA
-         ====================================================== -->
-
-    <section class="cta-section" id="contact">
-
-      <div class="container">
-
-        <div class="cta">
-
-          <div>
-
-            <h2>
-              Ready to Start Your Digital Journey?
-            </h2>
-
-            <p>
-              Find a job, hire people or get digital
-              services with DigiSER BD.
-            </p>
-
-          </div>
-
-
-          <div class="cta-buttons">
-
-            <button
-              class="btn btn-whatsapp"
-              onclick="contactWhatsApp()"
-            >
-              💬 Chat on WhatsApp
-            </button>
-
-            <button
-              class="btn btn-white"
-              onclick="openModal('contact')"
-            >
-              Contact Us
-            </button>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-  </main>
-
-
-  <!-- ========================================================
-       FOOTER
-       ======================================================== -->
-
-  <footer>
-
+  <!-- Footer -->
+  <footer id="contact">
     <div class="container">
 
       <div class="footer-grid">
 
-        <div>
+        <div class="footer-column">
+          <div class="logo footer-logo">
+            <strong>AFGHAN</strong>
+            <small>— RESTAURANT —</small>
+          </div>
 
-          <a href="#home" class="logo footer-logo">
-
-            <div class="logo-icon">D</div>
-
-            <div>
-              <div class="logo-text" style="color:#fff;">
-                DigiSER <span>BD</span>
-              </div>
-
-              <span class="logo-sub" style="color:#8298b2;">
-                Job • Service • Growth
-              </span>
-            </div>
-
-          </a>
-
-
-          <p class="footer-about">
-            Connecting people, supporting local businesses
-            and creating digital opportunities across Bangladesh.
+          <p>
+            Good food, good mood!<br>
+            Thank you for dining with us.
           </p>
-
 
           <div class="socials">
-
-            <a href="#" class="social">f</a>
-            <a href="#" class="social">▶</a>
-            <a href="#" class="social">in</a>
-            <a href="#" class="social">W</a>
-
+            <a href="#" aria-label="Facebook">f</a>
+            <a href="#" aria-label="Instagram">◎</a>
+            <a href="#" aria-label="WhatsApp">◉</a>
+            <a href="#" aria-label="Location">⌖</a>
           </div>
-
         </div>
 
+        <div class="footer-column">
+          <h3>Quick Links</h3>
 
-        <div>
-
-          <h3 class="footer-title">
-            Quick Links
-          </h3>
-
-          <div class="footer-links">
-            <a href="#home">Home</a>
-            <a href="#jobs">Jobs</a>
-            <a href="#services">Services</a>
-            <a href="#employees">Employees</a>
-            <a href="#businesses">Businesses</a>
-          </div>
-
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
         </div>
 
+        <div class="footer-column">
+          <h3>Contact Us</h3>
 
-        <div>
-
-          <h3 class="footer-title">
-            Our Services
-          </h3>
-
-          <div class="footer-links">
-            <a href="#services">Graphic Design</a>
-            <a href="#services">Social Media</a>
-            <a href="#services">Website Maintenance</a>
-            <a href="#services">Employee Supplier</a>
-            <a href="#services">Land Supported Service</a>
-            <a href="#services">Digital Marketing</a>
+          <div class="contact-item">
+            <span>☎</span>
+            <div>+880 1712 345 678</div>
           </div>
 
+          <div class="contact-item">
+            <span>⌖</span>
+            <div>Moulvibazar Sadar,<br>Sylhet, Bangladesh</div>
+          </div>
+
+          <div class="contact-item">
+            <span>◷</span>
+            <div>10:00 AM – 10:00 PM</div>
+          </div>
         </div>
 
+        <div class="footer-column">
+          <h3>Follow Us</h3>
 
-        <div>
-
-          <h3 class="footer-title">
-            Stay Connected
-          </h3>
-
-          <p
-            style="
-              color:#9db1c9;
-              font-size:11px;
-            "
-          >
-            Get updates about jobs, services
-            and new opportunities.
-          </p>
-
-
-          <div class="newsletter">
-
-            <input
-              type="email"
-              id="newsletterEmail"
-              placeholder="Your email address"
-            >
-
-            <button onclick="subscribeNewsletter()">
-              →
-            </button>
-
+          <div class="socials">
+            <a href="#" aria-label="Facebook">f</a>
+            <a href="#" aria-label="Instagram">◎</a>
           </div>
-
         </div>
 
       </div>
 
-
-      <div class="footer-bottom">
-
-        <span>
-          © 2026 DigiSER BD. All rights reserved.
-        </span>
-
-        <span>
-          Job • Service • Growth
-        </span>
-
+      <div class="copyright">
+        © 2026 Afghan Restaurant. All Rights Reserved.
       </div>
 
     </div>
-
   </footer>
 
 
-  <!-- ========================================================
-       MODAL
-       ======================================================== -->
-
-  <div class="modal" id="mainModal">
-
-    <div class="modal-box">
-
-      <button
-        class="modal-close"
-        onclick="closeModal()"
-      >
-        ×
-      </button>
-
-      <div id="modalContent">
-
-      </div>
-
-    </div>
-
-  </div>
-
-
-  <!-- ========================================================
-       TOAST
-       ======================================================== -->
-
-  <div class="toast" id="toast">
-    Done!
-  </div>
-
-
-  <!-- ========================================================
-       JAVASCRIPT
-       ======================================================== -->
-
   <script>
-
-    /* =========================================
-       MOBILE MENU
-       ========================================= */
-
-    function toggleMenu(){
-
-      const nav = document.getElementById("mainNav");
-
-      nav.classList.toggle("show");
-
-    }
-
-
-    /* =========================================
-       SCROLL
-       ========================================= */
-
-    function scrollToSection(id){
-
-      const section = document.getElementById(id);
-
-      if(section){
-
-        section.scrollIntoView({
-          behavior:"smooth"
-        });
-
-      }
-
-    }
-
-
-    /* =========================================
-       SEARCH
-       ========================================= */
-
-    function focusSearch(){
-
-      const search =
-        document.getElementById("searchInput");
-
-      scrollToSection("home");
-
-      setTimeout(function(){
-
-        search.focus();
-
-      },500);
-
-    }
-
-
-    function performSearch(){
-
-      const query =
-        document.getElementById("searchInput").value.trim();
-
-      const location =
-        document.getElementById("locationInput").value.trim();
-
-
-      if(!query){
-
-        showToast(
-          "Please enter a job, service or employee."
-        );
-
-        focusSearch();
-
-        return;
-
-      }
-
-
-      showToast(
-        "Searching for " +
-        query +
-        (location ? " in " + location : "") +
-        "..."
-      );
-
-
-      setTimeout(function(){
-
-        scrollToSection("jobs");
-
-      },800);
-
-    }
-
-
-    /* =========================================
-       MODAL
-       ========================================= */
-
-    function openModal(type){
-
-      const modal =
-        document.getElementById("mainModal");
-
-      const content =
-        document.getElementById("modalContent");
-
-
-      let html = "";
-
-
-      if(type === "login"){
-
-        html = `
-
-          <h2>Welcome Back</h2>
-
-          <p>
-            Login to your DigiSER BD account.
-          </p>
-
-          <div class="form-group">
-            <label>Email / Mobile</label>
-            <input
-              type="text"
-              placeholder="Enter email or mobile"
-            >
-          </div>
-
-          <div class="form-group">
-            <label>Password</label>
-            <input
-              type="password"
-              placeholder="Enter password"
-            >
-          </div>
-
-          <button
-            class="btn btn-primary"
-            style="width:100%;"
-            onclick="demoAction('Login')"
-          >
-            Login
-          </button>
-
-        `;
-
-      }
-
-
-      else if(type === "register"){
-
-        html = `
-
-          <h2>Create Your Account</h2>
-
-          <p>
-            Join DigiSER BD and get started.
-          </p>
-
-          <div class="form-group">
-            <label>Full Name</label>
-            <input
-              type="text"
-              placeholder="Your full name"
-            >
-          </div>
-
-          <div class="form-group">
-            <label>Account Type</label>
-
-            <select>
-              <option>Job Seeker</option>
-              <option>Employee / Professional</option>
-              <option>Business Owner</option>
-              <option>Service Provider</option>
-            </select>
-
-          </div>
-
-          <div class="form-group">
-            <label>Mobile Number</label>
-            <input
-              type="tel"
-              placeholder="01XXXXXXXXX"
-            >
-          </div>
-
-          <button
-            class="btn btn-primary"
-            style="width:100%;"
-            onclick="demoAction('Registration')"
-          >
-            Create Account
-          </button>
-
-        `;
-
-      }
-
-
-      else if(type === "hire"){
-
-        html = `
-
-          <h2>Hire an Employee</h2>
-
-          <p>
-            Tell us what kind of employee you need.
-          </p>
-
-          <div class="form-group">
-            <label>Your Name / Business</label>
-            <input
-              type="text"
-              placeholder="Business name"
-            >
-          </div>
-
-          <div class="form-group">
-            <label>Employee Type</label>
-
-            <select>
-              <option>Graphic Designer</option>
-              <option>Social Media Manager</option>
-              <option>Web Developer</option>
-              <option>Office Assistant</option>
-              <option>Sales Executive</option>
-              <option>Other</option>
-            </select>
-
-          </div>
-
-          <div class="form-group">
-            <label>Requirement</label>
-
-            <textarea
-              placeholder="Describe your requirement..."
-            ></textarea>
-
-          </div>
-
-          <button
-            class="btn btn-primary"
-            style="width:100%;"
-            onclick="demoAction('Employee request')"
-          >
-            Submit Request
-          </button>
-
-        `;
-
-      }
-
-
-      else if(type === "apply"){
-
-        html = `
-
-          <h2>Apply for Job</h2>
-
-          <p>
-            Send your application to the employer.
-          </p>
-
-          <div class="form-group">
-            <label>Your Name</label>
-            <input
-              type="text"
-              placeholder="Full name"
-            >
-          </div>
-
-          <div class="form-group">
-            <label>Mobile Number</label>
-            <input
-              type="tel"
-              placeholder="01XXXXXXXXX"
-            >
-          </div>
-
-          <div class="form-group">
-            <label>Your Skills</label>
-            <textarea
-              placeholder="Write your skills and experience..."
-            ></textarea>
-          </div>
-
-          <button
-            class="btn btn-primary"
-            style="width:100%;"
-            onclick="demoAction('Job application')"
-          >
-            Submit Application
-          </button>
-
-        `;
-
-      }
-
-
-      else if(type === "business"){
-
-        html = `
-
-          <h2>List Your Business</h2>
-
-          <p>
-            Create your business presence on DigiSER BD.
-          </p>
-
-          <div class="form-group">
-            <label>Business Name</label>
-            <input
-              type="text"
-              placeholder="Your business name"
-            >
-          </div>
-
-          <div class="form-group">
-            <label>Business Category</label>
-
-            <select>
-              <option>Retail Shop</option>
-              <option>Restaurant</option>
-              <option>Tailor</option>
-              <option>Service Business</option>
-              <option>IT / Digital</option>
-              <option>Other</option>
-            </select>
-
-          </div>
-
-          <div class="form-group">
-            <label>Location</label>
-            <input
-              type="text"
-              placeholder="Business location"
-            >
-          </div>
-
-          <button
-            class="btn btn-primary"
-            style="width:100%;"
-            onclick="demoAction('Business listing')"
-          >
-            Submit Business
-          </button>
-
-        `;
-
-      }
-
-
-      else if(type === "contact"){
-
-        html = `
-
-          <h2>Contact DigiSER BD</h2>
-
-          <p>
-            Send us your question or service requirement.
-          </p>
-
-          <div class="form-group">
-            <label>Your Name</label>
-            <input
-              type="text"
-              placeholder="Your name"
-            >
-          </div>
-
-          <div class="form-group">
-            <label>Mobile / Email</label>
-            <input
-              type="text"
-              placeholder="Contact information"
-            >
-          </div>
-
-          <div class="form-group">
-            <label>Message</label>
-            <textarea
-              placeholder="How can we help?"
-            ></textarea>
-          </div>
-
-          <button
-            class="btn btn-primary"
-            style="width:100%;"
-            onclick="demoAction('Message')"
-          >
-            Send Message
-          </button>
-
-        `;
-
-      }
-
-
-      content.innerHTML = html;
-
-      modal.classList.add("show");
-
-    }
-
-
-    function closeModal(){
-
-      document
-        .getElementById("mainModal")
-        .classList.remove("show");
-
-    }
-
-
-    /* =========================================
-       DEMO ACTION
-       ========================================= */
-
-    function demoAction(name){
-
-      closeModal();
-
-      showToast(
-        name +
-        " received successfully! Backend will be connected in the next step."
-      );
-
-    }
-
-
-    /* =========================================
-       WHATSAPP
-       ========================================= */
-
-    function contactWhatsApp(){
-
-      /*
-        Replace this number later with
-        your official DigiSER BD WhatsApp number.
-      */
-
-      const phone = "8801XXXXXXXXX";
-
-      const message =
-        "Hello DigiSER BD, I want to know about your services.";
-
-      const url =
-        "https://wa.me/" +
-        phone +
-        "?text=" +
-        encodeURIComponent(message);
-
-      if(phone.includes("X")){
-
-        showToast(
-          "Please add your DigiSER BD WhatsApp number in the code."
-        );
-
-        return;
-
-      }
-
-      window.open(url,"_blank");
-
-    }
-
-
-    /* =========================================
-       NEWSLETTER
-       ========================================= */
-
-    function subscribeNewsletter(){
-
-      const email =
-        document
-        .getElementById("newsletterEmail")
-        .value
-        .trim();
-
-
-      if(!email){
-
-        showToast(
-          "Please enter your email address."
-        );
-
-        return;
-
-      }
-
-
-      showToast(
-        "Thank you! You are subscribed."
-      );
-
-
-      document
-        .getElementById("newsletterEmail")
-        .value = "";
-
-    }
-
-
-    /* =========================================
-       TOAST
-       ========================================= */
-
-    let toastTimer;
-
-
-    function showToast(message){
-
-      const toast =
-        document.getElementById("toast");
-
-      toast.textContent = message;
-
-      toast.classList.add("show");
-
-
-      clearTimeout(toastTimer);
-
-
-      toastTimer =
-        setTimeout(function(){
-
-          toast.classList.remove("show");
-
-        },3500);
-
-    }
-
-
-    /* =========================================
-       CLOSE MODAL OUTSIDE
-       ========================================= */
-
-    document
-      .getElementById("mainModal")
-      .addEventListener("click",function(e){
-
-        if(e.target === this){
-
-          closeModal();
-
-        }
-
-      });
-
-
-    /* =========================================
-       ESC KEY
-       ========================================= */
-
-    document.addEventListener("keydown",function(e){
-
-      if(e.key === "Escape"){
-
-        closeModal();
-
-      }
-
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+
+    menuToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("show");
     });
 
-
-    /* =========================================
-       NAV ACTIVE STATE
-       ========================================= */
-
-    const sections =
-      document.querySelectorAll("main section[id]");
-
-    const navLinks =
-      document.querySelectorAll("nav a");
-
-
-    window.addEventListener("scroll",function(){
-
-      let current = "home";
-
-
-      sections.forEach(function(section){
-
-        const sectionTop =
-          section.offsetTop - 120;
-
-        if(window.scrollY >= sectionTop){
-
-          current = section.id;
-
-        }
-
+    document.querySelectorAll(".nav-links a").forEach(link => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("show");
       });
-
-
-      navLinks.forEach(function(link){
-
-        link.classList.remove("active");
-
-        if(
-          link.getAttribute("href") === "#" + current
-        ){
-
-          link.classList.add("active");
-
-        }
-
-      });
-
     });
-
-
-    /* =========================================
-       CLOSE MOBILE NAV AFTER CLICK
-       ========================================= */
-
-    navLinks.forEach(function(link){
-
-      link.addEventListener("click",function(){
-
-        document
-          .getElementById("mainNav")
-          .classList.remove("show");
-
-      });
-
-    });
-
-
   </script>
 
 </body>
